@@ -21,15 +21,15 @@ func DecodeMessage(msg []byte) (int, error) {
 	header, content, found := bytes.Cut(msg, []byte{'\r', '\n', '\r', '\n'})
 
 	if !found {
-		return errors.New("Did not found separator")
+		return 0, errors.New("Did not found separator")
 	}
 	// Content-Length: <number>
-	contentLengthBytes := header[len("Content-lenght: "):]
+	contentLengthBytes := header[len("Content-length: "):]
 	contentLength, err := strconv.Atoi(string(contentLengthBytes))
 	if err != nil {
 		return 0, err
 	}
 	// TODO: WE'll get to this soon
 	_ = content
-	return nil
+	return contentLength, nil
 }
