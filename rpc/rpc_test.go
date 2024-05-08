@@ -2,7 +2,7 @@ package rpc_test
 
 import (
 	"fmt"
-	"jims-lsp/rpc"
+	"learning-lsp/rpc"
 	"testing"
 )
 
@@ -21,7 +21,8 @@ func TestEncode(t *testing.T) {
 
 func TestDecode(t *testing.T) {
 	incomingMessage := "Content-Length: 15\r\n\r\n{\"Method\":\"Hi\"}"
-	method, contentLength, err := rpc.DecodeMessage([]byte(incomingMessage))
+	method, content, err := rpc.DecodeMessage([]byte(incomingMessage))
+	contentLength := len(content)
 	fmt.Println(method, "this is msg", contentLength)
 	if err != nil {
 		t.Fatal(err)
