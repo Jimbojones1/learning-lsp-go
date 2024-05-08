@@ -1,5 +1,10 @@
-[learning-lsp]2024/05/07 21:05:52 main.go:17: Logger Started!
-[learning-lsp]2024/05/07 21:05:52 main.go:35: Msg recieved with a method of initialize
-[learning-lsp]2024/05/07 21:05:52 main.go:44: Connected to: Neovim 0.9.5 
-[learning-lsp]2024/05/07 21:05:52 main.go:52: Sent the reply
-[learning-lsp]2024/05/07 21:05:53 main.go:35: Msg recieved with a method of initialized
+[learning-lsp]2024/05/08 18:25:28 main.go:18: Logger Started!
+[learning-lsp]2024/05/08 18:25:28 main.go:37: Msg recieved with a method of initialize
+[learning-lsp]2024/05/08 18:25:28 main.go:46: Connected to: Neovim 0.9.5 
+[learning-lsp]2024/05/08 18:25:28 main.go:51: Sent the reply
+[learning-lsp]2024/05/08 18:25:29 main.go:37: Msg recieved with a method of initialized
+[learning-lsp]2024/05/08 18:25:29 main.go:37: Msg recieved with a method of textDocument/didOpen
+[learning-lsp]2024/05/08 18:25:29 main.go:59: Connected to: file:///Users/jameshaff/go/src/learning-lsp/README.md  
+[learning-lsp]2024/05/08 18:25:34 main.go:37: Msg recieved with a method of textDocument/definition
+[learning-lsp]2024/05/08 18:25:36 main.go:37: Msg recieved with a method of textDocument/definition
+[learning-lsp]2024/05/08 18:25:39 main.go:37: Msg recieved with a method of textDocument/definition

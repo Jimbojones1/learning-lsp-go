@@ -27,7 +27,10 @@ type InitializeResult struct {
 
 type (
 	ServerCapabilities struct {
-		TestDocumentSync int `json:"textDocumentSync"` // value 1 says send the whole document everytime
+		TestDocumentSync   int  `json:"textDocumentSync"` // value 1 says send the whole document everytime
+		HoverProvider      bool `json:"hoverProvider"`
+		DefinitionProvider bool `json:"definitionProvider"`
+		CodeActionProvider bool `json:"codeActionProvider"`
 	}
 	ServerInfo struct {
 		Name    string `json:"name"`
@@ -43,7 +46,10 @@ func NewInitializeResponse(id int) InitializeResponse {
 		},
 		Result: InitializeResult{
 			Capabilities: ServerCapabilities{
-				TestDocumentSync: 1, // 1 says send the whole document everytime
+				TestDocumentSync:   1, // 1 says send the whole document everytime
+				HoverProvider:      true,
+				DefinitionProvider: true,
+				CodeActionProvider: true,
 			},
 			ServerInfo: ServerInfo{
 				Name:    "Learning Lsp",
