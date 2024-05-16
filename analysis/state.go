@@ -121,3 +121,23 @@ func LineRange(line, start, end int) lsp.Range {
 		},
 	}
 }
+
+func (s *State) TextDocumentCompletion(id int, uri string) lsp.CompletionResponse {
+	items := []lsp.CompletionItem{
+		{
+			Label:         "Neovim (BTW)",
+			Detail:        "is fun",
+			Documentation: "Neovim is better than vscode",
+		},
+	}
+	// ask static analysis tools to figure out good completions
+	response := lsp.CompletionResponse{
+		Response: lsp.Response{
+			RPC: "2.0",
+			ID:  &id,
+		},
+		Result: items,
+	}
+
+	return response
+}
